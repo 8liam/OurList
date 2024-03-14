@@ -85,8 +85,9 @@ const Movies = () => {
   }
   return (
     <>
-      <h1 className="py-4 font-medium text-xl">Movies</h1>
-      <div className="my-2 flex space-x-2 flex-row">
+      <h1 className="py-4 font-medium text-xl">Discover Movies</h1>
+      <div className="grid grid-cols-3 gap-2">
+
         <button
           onClick={() => setSelectedCategory('popular')}
           className={`basis-1/3 rounded bg-[#1c1c24] text-center py-2 border-2 ${selectedCategory === 'popular'
@@ -96,6 +97,8 @@ const Movies = () => {
         >
           <p>Popular</p>
         </button>
+
+
         <button
           onClick={() => setSelectedCategory('top_rated')}
           className={`basis-1/3 rounded bg-[#1c1c24] text-center py-2 border-2 ${selectedCategory === 'top_rated'
@@ -106,6 +109,8 @@ const Movies = () => {
 
           <p>Top Rated</p>
         </button>
+
+
         <button
           onClick={() => setSelectedCategory('upcoming')}
           className={`basis-1/3 rounded bg-[#1c1c24] text-center py-2 border-2 ${selectedCategory === 'upcoming'
@@ -115,7 +120,9 @@ const Movies = () => {
         >
           <p>Upcoming</p>
         </button>
+
       </div>
+
       {isLoading && (
         <div className="flex justify-center items-center mt-8">
           <Dna
